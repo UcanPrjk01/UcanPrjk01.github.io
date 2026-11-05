@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="modules" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Android modules | UcanPrjk01</title>
+  <meta name="description" content="Magisk, KernelSU, APatch and Android customization modules with requirements, install steps and changelogs.">
+  <meta name="theme-color" content="#0d0a17">
+  <link rel="canonical" href="https://ucanprjk01.github.io/pages/modules.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Android modules | UcanPrjk01">
+  <meta property="og:description" content="Magisk, KernelSU, APatch and Android customization modules with requirements, install steps and changelogs.">
+  <meta property="og:url" content="https://ucanprjk01.github.io/pages/modules.html">
+  <meta property="og:image" content="https://ucanprjk01.github.io/assets/mascot/chibi-01.png">
+  <meta name="twitter:card" content="summary">
+  <script>try{if(localStorage.getItem("ucanprjk01-theme")==="light")document.documentElement.setAttribute("data-theme","light")}catch(e){}</script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+  <noscript><p class="container">This site needs JavaScript to load its project data and navigation.</p></noscript>
+  <main id="main">
+    <section class="page-head"><div class="container"><h1>Android modules</h1><p>Magisk, KernelSU, APatch and customization modules. Open Details for requirements, installation steps and the changelog.</p></div></section>
+    <div class="container page-body">
+      <div class="callout callout-warning" role="note"><strong>Check compatibility first</strong><p>Only install a module that lists your root solution and Android version. Compatibility shown here comes from the module data, never from guesses.</p></div>
+      <div class="toolbar">
+        <div class="field field-grow"><label for="search">Search <span class="sr-only">(press / to focus)</span></label><input id="search" type="search" placeholder="Module name or keyword" autocomplete="off"></div>
+      </div>
+      <div class="chip-row" id="type-filters" role="group" aria-label="Filter by type"></div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div id="module-list"></div>
+    </div>
+    <dialog id="module-dialog" aria-labelledby="module-dialog-title">
+      <div class="modal-head"><h2 id="module-dialog-title">Module</h2><button type="button" class="btn btn-sm" id="module-dialog-close">Close</button></div>
+      <div class="modal-body" id="module-dialog-body"></div>
+    </dialog>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/theme.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/modules.js"></script>
+</body>
+</html>

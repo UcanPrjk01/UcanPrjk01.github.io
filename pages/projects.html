@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../" data-page="projects" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | UcanPrjk01</title>
+  <meta name="description" content="Open-source Android projects by UcanPrjk01. Search, filter by category and sort.">
+  <meta name="theme-color" content="#0d0a17">
+  <link rel="canonical" href="https://ucanprjk01.github.io/pages/projects.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | UcanPrjk01">
+  <meta property="og:description" content="Open-source Android projects by UcanPrjk01. Search, filter by category and sort.">
+  <meta property="og:url" content="https://ucanprjk01.github.io/pages/projects.html">
+  <meta property="og:image" content="https://ucanprjk01.github.io/assets/mascot/chibi-01.png">
+  <meta name="twitter:card" content="summary">
+  <script>try{if(localStorage.getItem("ucanprjk01-theme")==="light")document.documentElement.setAttribute("data-theme","light")}catch(e){}</script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+  <noscript><p class="container">This site needs JavaScript to load its project data and navigation.</p></noscript>
+  <main id="main">
+    <section class="page-head"><div class="container"><h1>Projects</h1><p>Open-source work by UcanPrjk01. Filter by category, search by name or technology, and sort the list.</p></div></section>
+    <div class="container page-body">
+      <div class="toolbar">
+        <div class="field field-grow"><label for="search">Search <span class="sr-only">(press / to focus)</span></label><input id="search" type="search" placeholder="Name, technology, device" autocomplete="off"></div>
+        <div class="field"><label for="sort">Sort by</label>
+          <select id="sort"><option value="featured">Featured first</option><option value="name">Name A to Z</option><option value="name-desc">Name Z to A</option><option value="newest">Recently updated</option></select></div>
+      </div>
+      <div class="chip-row" id="category-filters" role="group" aria-label="Filter by category"></div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div id="project-list"></div>
+    </div>
+    <section class="page-body container" style="padding-top:0">
+      <h2>Repositories on GitHub</h2>
+      <p style="color:var(--text-muted)">This list comes straight from GitHub and is separate from the curated projects above.</p>
+      <div id="github-repos" data-limit="9"></div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/theme.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/projects.js"></script>
+  <script src="../js/github.js"></script>
+</body>
+</html>

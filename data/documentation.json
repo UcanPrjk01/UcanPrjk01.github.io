@@ -1,0 +1,151 @@
+{
+  "articles": [
+    {
+      "id": "install-a-module",
+      "category": "Getting started",
+      "title": "Install a module",
+      "summary": "The general flow for Magisk, KernelSU and APatch modules.",
+      "content": [
+        {
+          "type": "callout",
+          "tone": "warning",
+          "text": "Back up your data first and read the module page. Install only modules that list your root solution and Android version as compatible."
+        },
+        {
+          "type": "h2",
+          "text": "Steps"
+        },
+        {
+          "type": "olist",
+          "items": [
+            "Download the module ZIP from the Downloads page.",
+            "Verify the SHA-256 checksum (see the next article).",
+            "Open your root manager app (Magisk, KernelSU or APatch).",
+            "Go to the Modules section and choose to install from storage.",
+            "Select the ZIP file and wait for the installer to finish.",
+            "Reboot the device."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "text": "Menu names differ between manager versions. The idea stays the same: install the ZIP from the Modules section, then reboot."
+        },
+        {
+          "type": "h2",
+          "text": "After installing"
+        },
+        {
+          "type": "p",
+          "text": "If something misbehaves, disable or remove the module from the same Modules screen and reboot. Then collect logs and report the issue."
+        }
+      ]
+    },
+    {
+      "id": "verify-checksum",
+      "category": "Getting started",
+      "title": "Verify a download",
+      "summary": "Compare the SHA-256 checksum of your file with the one on the Downloads page.",
+      "content": [
+        {
+          "type": "h2",
+          "text": "Linux"
+        },
+        {
+          "type": "code",
+          "lang": "bash",
+          "text": "# prints the SHA-256 checksum\nsha256sum module.zip"
+        },
+        {
+          "type": "h2",
+          "text": "macOS"
+        },
+        {
+          "type": "code",
+          "lang": "bash",
+          "text": "shasum -a 256 module.zip"
+        },
+        {
+          "type": "h2",
+          "text": "Windows PowerShell"
+        },
+        {
+          "type": "code",
+          "lang": "powershell",
+          "text": "Get-FileHash .\\module.zip -Algorithm SHA256"
+        },
+        {
+          "type": "p",
+          "text": "The printed value must match the checksum shown next to the download exactly. If it does not, delete the file and download it again."
+        }
+      ]
+    },
+    {
+      "id": "collect-logs",
+      "category": "Troubleshooting",
+      "title": "Collect logs with adb",
+      "summary": "Capture the information needed to diagnose a problem.",
+      "content": [
+        {
+          "type": "p",
+          "text": "Connect the device with USB debugging enabled, then run:"
+        },
+        {
+          "type": "code",
+          "lang": "bash",
+          "text": "adb devices\nadb logcat -d > logcat.txt\nadb shell getprop ro.build.fingerprint"
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "text": "Logs can contain personal data such as account names and device identifiers. Review the file and remove anything private before sharing it."
+        }
+      ]
+    },
+    {
+      "id": "report-an-issue",
+      "category": "Contributing",
+      "title": "Report an issue",
+      "summary": "What to include so a problem can be reproduced.",
+      "content": [
+        {
+          "type": "list",
+          "items": [
+            "Device model and Android version",
+            "Root solution and its version (Magisk, KernelSU or APatch)",
+            "Module or project name and version",
+            "What you expected and what happened instead",
+            "Steps to reproduce the problem",
+            "A log file, if the problem involves a crash or boot issue"
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Open the issue in the GitHub repository of the project concerned. One problem per issue keeps the discussion easy to follow."
+        }
+      ]
+    },
+    {
+      "id": "edit-site-data",
+      "category": "Maintaining this site",
+      "title": "Add content with JSON",
+      "summary": "Projects, modules, downloads and releases are plain JSON files.",
+      "content": [
+        {
+          "type": "p",
+          "text": "All lists on this site are loaded from the `data/` folder. Edit a file, commit it, and GitHub Pages publishes the change. Example entry for `data/projects.json`:"
+        },
+        {
+          "type": "code",
+          "lang": "json",
+          "text": "{\n  \"projects\": [\n    {\n      \"name\": \"Example Project\",\n      \"description\": \"One sentence about what it does.\",\n      \"category\": \"Tools\",\n      \"version\": \"1.0.0\",\n      \"status\": \"Stable\",\n      \"devices\": [],\n      \"tech\": [\"Kotlin\"],\n      \"repo\": \"https://github.com/UcanPrjk01/example\",\n      \"featured\": true,\n      \"updated\": \"2026-11-05\"\n    }\n  ]\n}"
+        },
+        {
+          "type": "callout",
+          "tone": "info",
+          "text": "Leave out any field you do not know. Empty fields are simply not shown, so nothing is invented."
+        }
+      ]
+    }
+  ]
+}
